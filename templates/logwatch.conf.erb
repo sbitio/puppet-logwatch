@@ -1,0 +1,16 @@
+# MANAGED BY PUPPET!
+
+<% if scope.lookupvar('logwatch::params::log_dir') != '' -%>
+LogDir = <%= scope.lookupvar('logwatch::params::log_dir') -%><% if scope.lookupvar('logwatch::params::multiple_hosts') -%>*<% end %>
+<% end -%>
+<% if scope.lookupvar('logwatch::params::numeric_addreses') -%>
+Numeric = yes
+<% end -%>
+Detail = <%= scope.lookupvar('logwatch::params::detail_level') %>
+<% if scope.lookupvar('logwatch::params::multiple_hosts') -%>
+HostLimit = no
+HostFormat = split
+#Not honored
+#SplitHosts = yes
+#MultiEmail = No
+<% end -%>
