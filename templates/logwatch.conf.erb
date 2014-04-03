@@ -10,10 +10,11 @@ Detail = <%= scope.lookupvar('logwatch::params::detail_level') %>
 <% if scope.lookupvar('logwatch::params::multiple_hosts') -%>
 HostLimit = no
 HostFormat = split
-<% if scope.lookupvar('logwatch::params::mail_to') != '' -%>
-MailTo = <%= scope.lookupvar('logwatch::params::mail_to') -%>
-<% end -%>
 #Not honored
 #SplitHosts = yes
 #MultiEmail = No
 <% end -%>
+<% if scope.lookupvar('logwatch::params::mail_to') != '' -%>
+MailTo = <%= scope.lookupvar('logwatch::params::mail_to') -%>
+<% end -%>
+
