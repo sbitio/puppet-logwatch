@@ -1,3 +1,7 @@
+# logwatch
+#
+# This class is responsible for installing and configuring the logwatch service
+#
 class logwatch (
   $ensure      = 'present',
   $autoupgrade = false
