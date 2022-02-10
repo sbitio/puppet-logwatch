@@ -1,3 +1,7 @@
+# logwatch::params
+#
+# This class handles the module data
+#
 class logwatch::params (
   $log_dir          = '',
   $multiple_hosts   = false,
